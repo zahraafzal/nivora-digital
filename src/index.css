@@ -1,0 +1,1123 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #0b1d36;
+  --gold: #c9aa72;
+  --gold-dark: #a8874b;
+  --light-bg: #f7f9fc;
+  --text: #4a5568;
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background: white;
+  color: var(--navy);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 90px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--navy);
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+  height: 78px;
+  width: auto;
+  display: block;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+
+.navbar nav a {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= BUTTONS ================= */
+.nav-button,
+.gold-btn,
+.outline-btn,
+.dark-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.gold-btn {
+  background: var(--navy);
+  color: white;
+}
+
+.gold-btn:hover {
+  background: var(--gold-dark);
+}
+
+.nav-button {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.outline-btn {
+  background: white;
+  color: var(--navy);
+  border: 1px solid #dde3ec;
+}
+
+.outline-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold-dark);
+}
+
+.dark-btn {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 640px;
+  padding: 80px 7% 100px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+  background: var(--light-bg);
+  overflow: hidden;
+}
+
+.eyebrow,
+.section-label {
+  display: block;
+  color: var(--gold-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--gold-dark);
+}
+
+.hero-content p {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 22px 0 34px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-actions.center {
+  justify-content: center;
+}
+
+.hero-points {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e3e8ef;
+  font-size: 14px;
+}
+
+.hero-points span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-points svg {
+  color: var(--gold-dark);
+}
+
+.hero-image-box {
+  position: relative;
+  height: 460px;
+}
+
+.hero-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+}
+
+.hero-image-box img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.hero-badge {
+  position: absolute;
+  left: -20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  background: white;
+  border-left: 4px solid var(--gold);
+  border-radius: 18px;
+  box-shadow: 0 18px 55px rgba(8, 25, 55, 0.2);
+  font-size: 15px;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--text);
+}
+
+/* ================= TRUST STRIP ================= */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 32px 7%;
+  background: white;
+  box-shadow: 0 5px 20px rgba(11, 29, 54, 0.04);
+}
+
+.trust-strip div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.trust-strip svg {
+  color: var(--gold-dark);
+}
+
+/* ================= COMMON SECTIONS ================= */
+.intro-section,
+.home-about,
+.home-services,
+.registrations,
+.why-us,
+.process,
+.ab-values {
+  padding: 100px 7%;
+}
+
+.intro-section h2,
+.home-about h2,
+.section-heading h2,
+.contact-cta h2,
+.home-banner h2,
+.ab-who-text h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.intro-section h2 span,
+.section-heading h2 span {
+  color: var(--gold-dark);
+}
+
+.intro-section p,
+.home-about p,
+.ab-who-text p {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 20px 0 30px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.home-services-grid,
+.why-grid,
+.process-grid,
+.registrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Page banner (About, Services, Detail, Contact) */
+.page-banner {
+  background: var(--light-bg);
+  text-align: center;
+  padding: 100px 7% 80px;
+}
+
+.page-banner h1 {
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.page-banner h1 span {
+  display: block;
+  color: var(--gold-dark);
+}
+
+.page-banner p {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ================= INTRO & ABOUT ================= */
+.intro-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-about,
+.ab-who {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ab-who {
+  padding: 100px 7%;
+}
+
+.home-about-image img,
+.ab-who-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.ab-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.ab-list span,
+.detail-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ab-list svg,
+.detail-points svg {
+  color: var(--gold-dark);
+}
+
+.ab-values {
+  background: var(--light-bg);
+}
+
+/* ================= SERVICE CARDS ================= */
+.home-services {
+  background: var(--light-bg);
+}
+
+.home-service-card {
+  background: white;
+  border-radius: 18px;
+  padding-bottom: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(11, 29, 54, 0.06);
+  transition: 0.3s;
+}
+
+.home-service-card:hover {
+  transform: translateY(-6px);
+}
+
+.home-service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+.home-service-card:hover img {
+  transform: scale(1.05);
+}
+
+.home-service-card .card-number,
+.home-service-card h3,
+.home-service-card p,
+.home-service-card a {
+  margin-left: 28px;
+  margin-right: 28px;
+}
+
+.card-number,
+.step-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.home-service-card h3 {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.home-service-card p {
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.home-service-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* ================= SERVICE DETAIL ================= */
+.detail-points {
+  display: grid;
+  gap: 14px;
+  margin: 24px 0 32px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.other-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.other-services a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  background: white;
+  border-radius: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 28px rgba(11, 29, 54, 0.05);
+  transition: 0.3s;
+}
+
+.other-services a:hover {
+  color: var(--gold-dark);
+  transform: translateY(-4px);
+}
+
+/* ================= BANNER ================= */
+.home-banner {
+  background: var(--navy);
+  padding: 60px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.home-banner h2 {
+  color: white;
+}
+
+/* ================= REGISTRATIONS ================= */
+.coming-soon {
+  text-align: center;
+  color: #8a93a3;
+}
+
+.registration-card {
+  background: white;
+  border: 1px solid #e6e1d6;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+}
+
+.registration-card svg {
+  color: var(--gold);
+}
+
+/* ================= WHY US & PROCESS ================= */
+.why-us {
+  background: var(--light-bg);
+}
+
+.why-card {
+  background: white;
+  padding: 34px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(11, 29, 54, 0.05);
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+}
+
+.why-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.why-card h3,
+.process-step h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.why-card p,
+.process-step p {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.process-step {
+  background: var(--light-bg);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+/* ================= CONTACT CTA (navy box) ================= */
+.contact-cta {
+  position: relative;
+  padding: 60px 7% 100px;
+  text-align: center;
+}
+
+.contact-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 40px;
+  left: 7%;
+  right: 7%;
+  background: var(--navy);
+  border-radius: 24px;
+}
+
+.contact-cta > * {
+  position: relative;
+}
+
+.contact-cta .section-label {
+  padding-top: 60px;
+  color: var(--gold);
+}
+
+.contact-cta h2 {
+  color: white;
+}
+
+.contact-cta h2 span {
+  color: var(--gold);
+}
+
+.contact-cta p {
+  color: #aeb6c4;
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+.contact-cta .gold-btn {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.contact-cta .outline-btn {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  padding: 100px 7%;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--light-bg);
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-card svg {
+  color: var(--gold-dark);
+  flex-shrink: 0;
+}
+
+.info-card small {
+  color: var(--text);
+}
+
+.info-card p {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(11, 29, 54, 0.08);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #dde3ec;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--navy);
+  background: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  justify-content: center;
+}
+
+.form-error {
+  color: #d93025;
+  font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #07172b;
+  color: #c6d3e5;
+  padding: 70px 7% 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footer-logo {
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.footer h4 {
+  color: var(--gold);
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.footer-grid a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-grid a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= TABLET & MOBILE ================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 6%;
+    min-height: 80px;
+  }
+
+  .logo img {
+    height: 56px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 6% 20px;
+    background: var(--navy);
+  }
+
+  .navbar nav.nav-open {
+    display: flex;
+  }
+
+  .navbar nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 6% 90px;
+  }
+
+  .hero-image-box {
+    height: 340px;
+  }
+
+  .hero-badge {
+    left: 0;
+  }
+
+  .intro-section,
+  .home-about,
+  .home-services,
+  .registrations,
+  .why-us,
+  .process,
+  .ab-values,
+  .ab-who,
+  .contact-wrap {
+    padding: 70px 6%;
+  }
+
+  .home-about,
+  .ab-who,
+  .contact-wrap,
+  .footer-grid,
+  .form-row,
+  .ab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-image img,
+  .ab-who-image img {
+    height: 300px;
+  }
+
+  .home-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 26px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ================= EXTRA ANIMATIONS ================= */
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content {
+  animation: slideFromLeft 0.9s ease both;
+}
+
+.hero-image-box {
+  animation: slideFromRight 0.9s ease 0.2s both;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-badge {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.scroll-cue svg {
+  animation: floatUpDown 1.6s ease-in-out infinite;
+}
+
+.gold-btn:hover,
+.outline-btn:hover,
+.nav-button:hover,
+.dark-btn:hover {
+  transform: translateY(-3px);
+}
+
+.navbar nav a {
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+  width: 100%;
+}
+
+.reveal.show .home-service-card,
+.reveal.show .why-card,
+.reveal.show .process-step,
+.reveal.show .other-services a {
+  animation: cardUp 0.6s ease backwards;
+}
+
+@keyframes cardUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal.show :is(.home-service-card, .why-card, .process-step, .other-services a):nth-child(2) { animation-delay: 0.1s; }
+.reveal.show :is(.home-service-card, .why-card, .process-step, .other-services a):nth-child(3) { animation-delay: 0.2s; }
+.reveal.show :is(.home-service-card, .why-card, .process-step, .other-services a):nth-child(4) { animation-delay: 0.3s; }
+.reveal.show :is(.home-service-card, .why-card, .process-step, .other-services a):nth-child(5) { animation-delay: 0.4s; }
+.reveal.show :is(.home-service-card, .why-card, .process-step, .other-services a):nth-child(6) { animation-delay: 0.5s; }
+
+.why-icon {
+  transition: 0.3s;
+}
+
+.why-card:hover .why-icon {
+  background: var(--gold);
+  color: var(--navy);
+  transform: rotate(-8deg);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  100% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+.home-service-card:hover,
+.why-card:hover,
+.other-services a:hover,
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.home-services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= PAGE BANNER - photo + navy overlay ================= */
+.page-banner {
+  position: relative;
+  padding: 130px 7% 110px;
+  background-color: var(--navy);
+  /* upar navy rang ki tah, neeche photo */
+  background-image:
+    linear-gradient(rgba(11, 29, 54, 0.88), rgba(11, 29, 54, 0.75)),
+    url("https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Neeche gold patli line */
+.page-banner::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: var(--gold);
+}
+
+.page-banner .section-label {
+  color: var(--gold);
+}
+
+.page-banner h1 {
+  color: white;
+  animation: slideFromLeft 0.8s ease both;
+}
+
+.page-banner h1 span {
+  color: var(--gold);
+}
+
+.page-banner p {
+  color: #c6d3e5;
+}
+
+@media (max-width: 900px) {
+  .page-banner {
+    padding: 90px 6% 80px;
+  }
+}
+
+/* ================= FONT SIZES  ================= */
+.hero h1 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+
+.page-banner h1 {
+  font-size: clamp(28px, 3.6vw, 44px);
+}
+
+.intro-section h2,
+.home-about h2,
+.section-heading h2,
+.contact-cta h2,
+.home-banner h2,
+.ab-who-text h2 {
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.hero-content p,
+.page-banner p {
+  font-size: 17px;
+}
+
+.home-service-card h3 {
+  font-size: 19px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .page-banner h1 {
+    font-size: 26px;
+  }
+
+  .intro-section h2,
+  .home-about h2,
+  .section-heading h2,
+  .contact-cta h2,
+  .home-banner h2,
+  .ab-who-text h2 {
+    font-size: 24px;
+  }
+
+  .hero-content p,
+  .page-banner p,
+  .intro-section p,
+  .home-about p,
+  .ab-who-text p {
+    font-size: 15px;
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .card-number,
+  .step-number {
+    font-size: 24px;
+  }
+}
