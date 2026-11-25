@@ -41,7 +41,13 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© {year} Nivora Digital. All rights reserved.</p>
-        <a href="#top">Back To Top ↑</a>
+        <button
+          type="button"
+          className="back-to-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Back To Top ↑
+        </button>
       </div>
     </footer>
   );

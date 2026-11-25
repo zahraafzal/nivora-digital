@@ -1121,3 +1121,16 @@ a {
     font-size: 24px;
   }
 }
+
+/* Back To Top button (footer) */
+.back-to-top {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  color: var(--gold);
+}
